@@ -175,6 +175,10 @@ function createInput(fd) {
   input.type = fd.Type;
   input.id = fd.Field;
 
+  if (fd.Value) {
+    input.value = fd.Value;
+  }
+
   const param = getURLParam(input.id);
   if (param) {
     input.value = param;
@@ -219,15 +223,17 @@ function createTextarea(fd) {
 
 function createLabel(fd) {
   const label = document.createElement('label');
-  label.setAttribute('for', fd.Field);
-  if (fd.Extra) {
-    label.innerHTML = `<a href="${fd.Extra}">${fd.Label}</a>`;
-  } else {
-    label.textContent = fd.Label;
-  }
+  if (fd.Label) {
+    label.setAttribute('for', fd.Field);
+    if (fd.Extra) {
+      label.innerHTML = `<a href="${fd.Extra}">${fd.Label}</a>`;
+    } else {
+      label.textContent = fd.Label;
+    }
 
-  if (fd.Mandatory === 'x') {
-    label.insertAdjacentHTML('beforeend', '<span class="required">*</span>');
+    if (fd.Mandatory === 'x') {
+      label.insertAdjacentHTML('beforeend', '<span class="required">*</span>');
+    }
   }
   return label;
 }

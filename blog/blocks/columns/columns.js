@@ -24,6 +24,10 @@ export default function decorate(block) {
   if (block.classList.contains('small-icons')) {
     cols[0].parentElement.classList.add('column-small-icons-container');
     cols.forEach((col) => col.classList.add(`icon-${cols.length}-cols`));
+  } else if (block.classList.contains('step')) {
+    cols[0].parentElement.classList.add('step-wrap');
+    cols[0].classList.add('step-left');
+    cols[1].classList.add('step-right');
   } else if (cols.length === 2) {
     let splitVals = null;
     [...block.classList].some((c) => {

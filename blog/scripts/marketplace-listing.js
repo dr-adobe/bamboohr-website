@@ -105,6 +105,11 @@ export default async function decorateTemplate(main) {
   const requestInfo = document.createElement('p');
   const appName = window.location.pathname.split('/').pop();
   requestInfo.innerHTML = `<a href="/marketplace/request-information?appName=${appName}" id="marketplace-request-info">Request Information</a>`;
+  if (getMetadata('extra-form-fields')) {
+    const extraFormFields = getMetadata('extra-form-fields');
+    const fieldsParam = extraFormFields.split(',').map((field) => `show=${field.trim()}`).join('&');
+    requestInfo.innerHTML = `<a href="/marketplace/request-information?appName=${appName}&${fieldsParam}" id="marketplace-request-info">Request Information</a>`;
+  }
   const sections = [...main.children].slice(2);
   if (sections.length < 3) {
     // if missing, add listing details section

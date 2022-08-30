@@ -96,6 +96,9 @@
   --heading-color: var(--color-gray-12);
   --heading-font-family: 'Fira Sans', 'Trebuchet', sans-serif;
 
+  /* stylized font */
+  --stylized-font-family: 'Permanent Marker', sans-serif;
+
   /* box-shadow */
   --box-shadow-1: 0 2px 5px 0 rgb(0 0 0 / 20%);
   --box-shadow-2: 0 30px 60px -40px rgb(31 38 23 / 50%);
@@ -355,7 +358,7 @@ main .columns ul li::before {
   top: 5px;
   left: 0;
   background-image: var(--bullet-level1-gray);
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: center;
   width: 16px;
   height: 18px;
@@ -1034,15 +1037,15 @@ main .default-content-wrapper p a.button:any-link {
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
-    display: grid; 
-    grid-template-columns: 368px calc(100% - 368px); 
+    display: grid;
+    grid-template-columns: 368px calc(100% - 368px);
     grid-template-rows: repeat(3, auto) 1fr;
     /* stylelint-disable-next-line */
-    grid-template-areas: 
+    grid-template-areas:
       'header header'
       'carousel carousel'
       'links tabs'
-      'details tabs'; 
+      'details tabs';
     }
 
   .marketplace-listing .listing-header-container {

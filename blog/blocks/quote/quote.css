@@ -20,7 +20,7 @@ main .quote {
 	main .quote {
 		width: 250px;
 	}
-	
+
 	main .quote.left {
 		border-right: 2px solid var(--category-color);
 		border-left: none;
@@ -34,11 +34,12 @@ main .quote {
 		margin-left: 50px;
 	}
 }
+
 @media (min-width: 1200px) {
 	main .quote {
 		width: 400px;
 	}
-	
+
 	main .quote.left {
 		margin-left: -200px;
 	}
@@ -46,4 +47,198 @@ main .quote {
 	main .quote.right {
 		margin-right: -200px;
 	}
+}
+
+/* Cols/Widths */
+main .quote.full > div {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 1.25rem;
+}
+
+main .quote.full .image,
+main .quote.full .content {
+	flex: 1 0 0;
+}
+
+@media (max-width: 1024px) {
+	main .quote.full .image {
+		order: 1;
+	}
+
+	main .quote.full .content {
+		order: 2;
+	}
+}
+
+@media (min-width: 1025px) {
+	main .quote.full > div {
+		flex-direction: revert;
+		gap: 2rem;
+	}
+}
+
+main .quote.full.image-130 .image {
+	max-width: 8.125rem;
+}
+
+main .quote.full.image-200 .image {
+	max-width: 12.5rem;
+}
+
+main .quote.full.image-420 .image {
+	max-width: 26.25rem;
+}
+
+/* Colors */
+main .quote.full {
+	background-clip: revert;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-webkit-background-clip: revert;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-moz-background-clip: revert;
+	background-image: none;
+	border: 0;
+	font-family: var(--body-font-family);
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	-webkit-text-fill-color: revert;
+	width: auto;
+}
+
+@media (min-width: 600px) {
+	main .quote.full {
+		font-size: 1.375rem;
+		line-height: 1.7272;
+	}
+}
+
+@media (min-width: 1025px) {
+	main .quote.full {
+		font-size: 1.625rem;
+		line-height: 1.4615;
+		text-align: revert;
+	}
+}
+
+main .quote.full [data-align="center"] {
+	text-align: center;
+}
+
+main .quote.full [data-align="center"] picture {
+	margin: 0 auto;
+}
+
+main .quote.full a:not(.button),
+main .quote.full strong {
+	font-weight: var(--heading-font-weight);
+}
+
+main .quote.full .byline {
+	font-family: var(--body-font-family);
+	font-size: 1rem;
+	font-weight: var(--heading-font-weight);
+	letter-spacing: .125rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+@media (min-width: 1025px) {
+	main .quote.full .button-container {
+		text-align: left;
+	}
+}
+
+main .quote.full .button {
+	border-radius: 1.875rem;
+	color: var(--color-white);
+	font-family: var(--body-font-family);
+	font-size: .9375rem;
+	font-weight: var(--heading-font-weight);
+	letter-spacing: 0.0312rem;
+	line-height: 1.3333;
+	margin: 0;
+	padding: .625rem 1.875rem;
+	white-space: revert;
+}
+
+/* Blue */
+main .quote.blue {
+	color: var(--color-5-shade-5);/* TODO: needs theme replacement */
+}
+
+main .quote.blue a:not(.button),
+main .quote.blue strong {
+	background-image: linear-gradient(rgb(0 0 0 / 0%) 50%, var(--color-5-tint-10) 0);/* TODO: needs theme replacement */
+	color: var(--color-5-shade-5);/* TODO: needs theme replacement */
+}
+
+main .quote.blue .byline {
+	color: var(--color-gray-12);/* TODO: needs theme replacement */
+}
+
+main .quote.blue .button {
+	background-image: linear-gradient(90deg, var(--color-5-shade-5) 0%, var(--color-5-shade-10) 100%);/* TODO: needs theme replacement */
+}
+
+/* Green */
+main .quote.green {
+	color: var(--color-1-shade-5);/* TODO: needs theme replacement */
+}
+
+main .quote.green a:not(.button),
+main .quote.green strong {
+	background-image: linear-gradient(rgb(0 0 0 / 0%) 50%, var(--color-1-tint-10) 0);/* TODO: needs theme replacement */
+	color: var(--color-1-shade-5);/* TODO: needs theme replacement */
+}
+
+main .quote.green .byline {
+	color: var(--color-gray-10);/* TODO: needs theme replacement */
+}
+
+main .quote.green .button {
+	background-image: linear-gradient(90deg, var(--color-1-shade-5) 0%, var(--color-1-shade-10) 100%);/* TODO: needs theme replacement */
+}
+
+/* Hero */
+main .quote.hero {
+	background-clip: revert;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-webkit-background-clip: revert;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-moz-background-clip: revert;
+	background-image: none;
+	border: 0;
+	color: var(--color-white);
+	font-family: var(--stylized-font-family);
+	font-size: 2.5rem;
+	font-style: normal;
+	font-weight: var(--body-font-weight);
+	line-height: 1.35;
+	margin: 0;
+	padding: 0;
+	-webkit-text-fill-color: revert;
+	width: auto;
+}
+
+main .quote.hero .byline {
+	color: var(--color-white);
+	font-family: var(--body-font-family);
+	font-size: 1rem;
+	font-weight: var(--heading-font-weight);
+	letter-spacing: .125rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+/* TODO: just to show update */
+.temp-bg-green {
+	background-image: linear-gradient(90deg, var(--color-1-shade-5) 0%, var(--color-1-shade-10) 100%);/* TODO: needs theme replacement? */
 }
