@@ -8,7 +8,8 @@
     "test:watch": "npm test -- --watch",
     "lint:js": "eslint .",
     "lint:css": "stylelint 'blog/blocks/**/*.css' 'blog/styles/*.css'",
-    "lint": "npm run lint:js && npm run lint:css"
+    "lint": "npm run lint:js && npm run lint:css",
+    "up": "node sass-compile.js & hlx up"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "eslint": "8.14.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.26.0",
+    "sass": "^1.54.6",
     "sinon": "13.0.2",
     "stylelint": "14.8.0",
     "stylelint-config-prettier": "9.0.3",

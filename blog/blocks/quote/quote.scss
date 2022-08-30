@@ -1,0 +1,50 @@
+main .quote {
+	font-family: var(--heading-font-family);
+	background: var(--category-quote-bg);
+  	background-clip: text;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-webkit-background-clip: text;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 35px 0;
+	padding: 10px 0 10px 32px;
+	border-left: 2px solid var(--category-color);
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+@media (min-width: 600px) {
+	main .quote {
+		width: 250px;
+
+        &.left {
+            border-right: 2px solid var(--category-color);
+            border-left: none;
+            padding: 10px 32px 10px 0;
+            float: left;
+            margin-right: 50px;
+        }
+
+        &.right {
+            float: right;
+            margin-left: 50px;
+        }
+	}
+}
+
+@media (min-width: 1200px) {
+	main .quote {
+		width: 400px;
+
+        &.left {
+            margin-left: -200px;
+        }
+
+        &.right {
+            margin-right: -200px;
+        }
+	}
+}
